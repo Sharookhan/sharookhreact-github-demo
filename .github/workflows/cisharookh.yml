@@ -16,10 +16,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          cache: 'npm'
+          node-version: '20'
+
+      - name: Display Node.js version
+        run: node --version
+
+      - name: Display NPM version
+        run: npm --version
+
+      - name: List files in repository
+        run: ls -la
+        working-directory: ./sharookh-react-app
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         working-directory: ./sharookh-react-app
 
       - name: Run tests
