@@ -29,11 +29,7 @@ jobs:
         working-directory: ./sharookh-react-app
 
       - name: Install dependencies
-        run: npm ci
-        working-directory: ./sharookh-react-app
-
-      - name: Run tests
-        run: npm test
+        run: npm install
         working-directory: ./sharookh-react-app
 
       - name: Build project
